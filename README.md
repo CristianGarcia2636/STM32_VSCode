@@ -16,13 +16,15 @@ You will then need to make the following edits to your CMakeSystem.cmake:(br)
 ```set(CMAKE_SYSTEM_NAME "Generic")
 set(CMAKE_SYSTEM_PROCESSOR "arm")
 set(CMAKE_CROSSCOMPILING "TRUE")
-set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)```
+set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
+```
 
 and create a settings.json entry in your working directories .vscode folder with the following:(br)
 
 ```{
 "cmake.generator": "MinGW Makefiles"
-}```
+}
+```
 
 and finally create a CMake Tool-kit that will compile using our desired setup by running the command from the command palette and entering the following into your cmake-tools-kits.json:(br)
 
@@ -32,7 +34,8 @@ and finally create a CMake Tool-kit that will compile using our desired setup by
 "C": "C:\Program Files (x86)\GNU Tools ARM Embedded\8 2018-q4-major\bin\arm-none-eabi-gcc.exe",
 "CXX": "C:\Program Files (x86)\GNU Tools ARM Embedded\8 2018-q4-major\bin\arm-none-eabi-g++.exe"
 },
-}```
+}
+```
 
 Note that you will want to reset your CMake environment while making these changes with the reset option in the command palette.
 - From here you can use the none automated commands from our Bare Metal Programming Guide to compile/link/flash our firmware code.(br)
