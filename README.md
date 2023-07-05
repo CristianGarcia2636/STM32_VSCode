@@ -6,7 +6,8 @@
   
 - Download the latest version of the [MinGW-W64](https://www.msys2.org/) via MSYS2 and install by following the steps included on the website.
 
-- Install the MinGW-W64 toolchain by running the following command in your MinGW terminal: pacman -S --needed base-devel mingw-w64-x86_64-toolchain 
+- Install the MinGW-W64 toolchain by running the following command in your MinGW terminal:
+```pacman -S --needed base-devel mingw-w64-x86_64-toolchain```
 Accept the default to install all the members in the toolchain group.
 Add the path to your MinGW bin foled to your Windows PATH environment C:\msys64\mingw64\bin
 
