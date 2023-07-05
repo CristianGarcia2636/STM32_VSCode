@@ -39,8 +39,8 @@ and finally create a CMake Tool-kit that will compile using our desired setup by
 
 Note that you will want to reset your CMake environment while making these changes with the reset option in the command palette.
 - From here you can use the none automated commands from our Bare Metal Programming Guide to compile/link/flash our firmware code.(br)
-Compile Code: ```arm-none-eabi-gcc -mcpu=cortex-m4 main.c -c```
-Reading compiled code: ```arm-none-eabi-objdump -h main.o```
-Producing full firmware.elf file with link.ld: ```arm-none-eabi-gcc -T link.ld -nostdlib main.o -o firmware.elf```
-Extract sections from fimware.elf into a single binary blob: ```arm-none-eabi-objcopy -O binary firmware.elf firmware.bin```
+Compile Code: ```arm-none-eabi-gcc -mcpu=cortex-m4 main.c -c```(br)
+Reading compiled code: ```arm-none-eabi-objdump -h main.o```(br)
+Producing full firmware.elf file with link.ld: ```arm-none-eabi-gcc -T link.ld -nostdlib main.o -o firmware.elf```(br)
+Extract sections from fimware.elf into a single binary blob: ```arm-none-eabi-objcopy -O binary firmware.elf firmware.bin```(br)
 Flash to hardware with ST-LINK utility: ```\path\to\directory\ST-LINK_CLI.exe -P \path\to\directory\firmware.bin 0x08000000 -V```
